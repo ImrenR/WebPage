@@ -27,7 +27,7 @@ const Paths = () => {
           className="btn btn-danger w-50"
          
         >
-          ana sayfa
+         Main Page
         </button>
         <button
           className="btn btn-warning w-25"

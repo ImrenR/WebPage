@@ -1,12 +1,12 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
-import data from "../data.js"
+import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import data from "../data.js";
 
 
 const CardDetails = () => {
 
 const {namee} =useParams()
-
+const navigate= useNavigate()
   return (
     <div className="container text-center mt-4">
        {data.map((a) =>
@@ -17,14 +17,16 @@ const {namee} =useParams()
               <h3>{a.text} </h3>
               <h4>{a.yorum} </h4>
               <div>
-                <button className="btn btn-warning">GO BACK</button>
-                <button className="btn btn-primary">GO HOME</button>
+                <button className="btn btn-warning"
+                onClick={()=>navigate(-1)}>GO BACK</button>
+                <button className="btn btn-primary"
+                onClick={()=>navigate("/")}>GO HOME</button>
               </div>
             </div>
           )
         )}
     </div>
     );
-}
+};
 
-export default CardDetails
+export default CardDetails;

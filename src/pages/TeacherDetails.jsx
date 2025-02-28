@@ -4,7 +4,9 @@ import Loading from "../img/Loading_icon.gif";
 import { useNavigate, useParams } from "react-router-dom";
 
 const TeacherDetails = () => {
-  const  navigate= useNavigate();
+
+  const  navigate= useNavigate()
+
   const { id } = useParams();
   const [kisi, setKisi] = useState({});
   const [error, setError] = useState(false);
@@ -25,7 +27,7 @@ const TeacherDetails = () => {
       <div>
         <img src={Loading} alt="" />
       </div>
-    )
+    );
   }
 
   return (
@@ -42,13 +44,11 @@ const TeacherDetails = () => {
         <h5>{kisi.website}</h5>
         <h5>{kisi.email}</h5>
       </div>
+      <div>
+        <button className="btn btn-warning" onClick={()=>navigate(-1)}>GO BACK</button>
 
-      <button className="btn btn-warning"
-      onClick={()=>navigate(-1)}
-      >Go Back</button>
-      <button className=""
-      onClick={()=>navigate('/')}
-      >Go Home</button>
+        <button className="btn btn-primary"  onClick={()=>navigate("/")}>GO HOME</button>
+      </div>
     </div>
   );
 };

@@ -5,17 +5,20 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Teacher = () => {
+
 const navigate = useNavigate()
 const [people, setPeople] = useState([]);
 
 const getData = async() => {
  const res = await axios("https://jsonplaceholder.typicode.com/users");
+
   setPeople(res.data);
 };
 
 useEffect(() => {
   getData();
  }, []);
+
   return (
     <div className='container text-center mt-4'>
       <div className='row'>
@@ -37,4 +40,4 @@ useEffect(() => {
   );
 };
 
-export default Teacher
+export default Teacher;

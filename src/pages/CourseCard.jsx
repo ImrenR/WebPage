@@ -1,11 +1,12 @@
-import React, {useNavigate}from 'react';
+import React from 'react';
 import data from "../data";
 import {Container, Card, Row, Col, Button} from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
 
 const CourseCard = () => {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Container className="text-center">
@@ -21,7 +22,8 @@ const CourseCard = () => {
                 <Card.Text>{a.text}</Card.Text>
                 <Button
                   variant="danger"
-                 onClick={()=>navigate(`/courses/${a.name}`)}
+                 onClick={()=>
+                  navigate(`/courses/${a.name}`)}
                   
                 >
                   DETAILS
@@ -35,4 +37,4 @@ const CourseCard = () => {
     </Container>
   );
 };
-export default CourseCard
+export default CourseCard;

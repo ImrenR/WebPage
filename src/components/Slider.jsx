@@ -1,4 +1,4 @@
-  
+import React from 'react';
 import {Carousel} from "react-bootstrap";
 import isa from "../img/isa.jpeg";
 import devops from "../img/devops.jpeg";

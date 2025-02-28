@@ -11,7 +11,7 @@ const PrivateRouter = () => {
    
   return name==="imren" && password==="34577" ? (<Outlet/>): (<Navigate to="/login"/>)(
     <div>PrivateRouter</div>
-  )
-}
+  );
+};
 
-export default PrivateRouter
+export default PrivateRouter;

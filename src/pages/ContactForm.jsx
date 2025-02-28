@@ -16,7 +16,6 @@ const ContactForm = () => {
 
   return (
     <div className="container text-center mt-4">
-      <h1>*********************************************</h1>
 
       <h1>FORM(EVENTS)</h1>
 

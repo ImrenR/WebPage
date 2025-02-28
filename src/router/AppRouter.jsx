@@ -13,37 +13,41 @@ import PrivateRouter from './PrivateRouter';
 import Login from '../pages/Login';
 import FS from "../pages/FS";
 import AWS from "../pages/AWS";
+import Footer from '../components/Footer';
 
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
+    
     <MyNavbar/>
+   
     <Routes>
  
      <Route exact path="/" element={<Home/>}/>  
      <Route path="/teacher" element= {<Teacher/>}/> 
-     <Route path="/teacher:id" element={<TeacherDetails/>} />
+     <Route path="/teacher/:id" element={<TeacherDetails/>} />
      <Route path="/login" element= {<Login/>}/> 
-     <Route path="/course" element={<CourseCard/>}/> 
-     <Route path="/courses:namee" element={<CardDetails/>}  />
+     <Route path="/courses" element={<CourseCard/>}/> 
+     <Route path="/courses/:namee" element={<CardDetails/>}  />
     
      <Route path="*" element={<NotFound/>} />
     
   <Route path="/contact" element={<PrivateRouter/>}>
- <Route path="" element={<ContactForm/>}/> 
+    <Route path="" element={<ContactForm/>}/> 
   </Route>
-     <Route path='/paths' elemet={<Paths />}> 
+     
+     <Route path='/paths' element={<Paths />}> 
         <Route path="/paths/fs" element={<FS/>} />
         <Route path="/paths/aws" element={<AWS/>} />
-        <Route path="/paths/fs" element={<FS/>} />
       </Route>
      
      </Routes>
+     <Footer/>
      </BrowserRouter>
   
    )
   
 }
 
-export default AppRouter
+export default AppRouter;

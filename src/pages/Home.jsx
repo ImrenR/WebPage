@@ -1,6 +1,6 @@
-import React from 'react'
-import Slider from '../components/Slider'
-import Buton from '../components/Buton'
+import React from 'react';
+import Slider from '../components/Slider';
+import Buton from '../components/Buton';
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
       <Slider/>
       <Buton/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
