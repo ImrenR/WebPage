@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useNavigate} from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Teacher = () => {
+const navigate = useNavigate()
 const [people, setPeople] = useState([]);
 
 const getData = async() => {
@@ -20,10 +22,10 @@ useEffect(() => {
         {people.map((item)=> {
           return (
         <div key={item.id} className='col-12 col-sm-6 col-d-md-4'>
-          {/* */}
           <img 
            src={`https://api.dicebear.com/9.x/micah/svg?seed=${item.id}`}
-           alt="" />
+           alt="" 
+           onClick={()=>navigate(`/teacher/${item.id}`, {state : {item}})}/>
            <h5>{item.name}</h5>
            <h6>{item.username}</h6>
            <h6>{item.phone}</h6>
