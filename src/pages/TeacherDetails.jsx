@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NotFound from "./NotFound";
 import Loading from "../img/Loading_icon.gif";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const TeacherDetails = () => {
   const  navigate= useNavigate();
@@ -32,7 +32,7 @@ const TeacherDetails = () => {
     <div className="container text-center my-4">
       <div>
         <img
-          src={`https://api.dicebear.com/9.x/micah/svg?seed=${item.id}`}
+          src={`https://api.dicebear.com/9.x/micah/svg?seed=${kisi.id}`}
           alt=""
           width="300px"
         />

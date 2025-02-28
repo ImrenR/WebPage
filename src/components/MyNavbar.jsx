@@ -8,7 +8,9 @@ const MyNavbar = () => {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Link to="/">
-          <img src={logo} alt="" />
+          <img src={logo} 
+          width='250px'
+          alt="" />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
