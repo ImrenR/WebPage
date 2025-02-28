@@ -1,5 +1,4 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import data from "../data.js"
 

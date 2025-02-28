@@ -1,9 +1,9 @@
   
-import {Carousel} from "react-bootstrap"
-import isa from "../img/isa.jpeg"
-import devops from "../img/devops.jpeg"
-import about from "../img/about.jpeg"
-import "./app.css"
+import {Carousel} from "react-bootstrap";
+import isa from "../img/isa.jpeg";
+import devops from "../img/devops.jpeg";
+import about from "../img/about.jpeg";
+import "./app.css";
 
 const Slider = () => {
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
-import logo from "../img/logo.png"
+import logo from "../img/logo.png";
+
 
 const MyNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg"
+    style={{ backgroundColor: "#FFFBEC"}}>
       <Container>
         <Link to="/">
           <img src={logo} 

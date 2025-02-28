@@ -16,7 +16,7 @@ const TeacherDetails = () => {
       .then((veri) => setKisi(veri))
       .catch((err) => setError(true))
       .finally(()=>setLoading(false))
-  }, []);
+  }, [id]);
 
   if (error === true) {
     return <NotFound />;
