@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import NotFound from "./NotFound";
 import Loading from "../img/Loading_icon.gif";
+import { useNavigate } from "react-router-dom";
 
 const TeacherDetails = () => {
+  const  navigate= useNavigate();
   const { id } = useParams();
   const [kisi, setKisi] = useState({});
   const [error, setError] = useState(false);
@@ -41,8 +43,12 @@ const TeacherDetails = () => {
         <h5>{kisi.email}</h5>
       </div>
 
-      <button className="btn btn-warning">Go Back</button>
-      <button className=""></button>
+      <button className="btn btn-warning"
+      onClick={()=>navigate(-1)}
+      >Go Back</button>
+      <button className=""
+      onClick={()=>navigate('/')}
+      >Go Home</button>
     </div>
   );
 };
