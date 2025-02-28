@@ -25,7 +25,7 @@ useEffect(() => {
           <img 
            src={`https://api.dicebear.com/9.x/micah/svg?seed=${item.id}`}
            alt="" 
-           onClick={()=>navigate(`/teacher/${item.id}`, {state : {item}})}/>
+           onClick={()=>navigate(`/teacher/${item.id}`)}/>
            <h5>{item.name}</h5>
            <h6>{item.username}</h6>
            <h6>{item.phone}</h6>

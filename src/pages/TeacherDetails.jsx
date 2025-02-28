@@ -1,13 +1,22 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import NotFound from './NotFound'
+
 
 const TeacherDetails = () => {
 
-  const {state:{item}} = useLocation()
+ const {id} = useParams ()
+ const [kisi,setKisi]= useState({})
+const [error, setError]= useState(false)
+useEffect (()=> {fetch=(`https://jsonplaceholder.typicode.com/users${id}`)
+.then((res)=>res.json())
+.then((veri)=>setKisi(veri))
+.catch((err)=>setError(true))
+},[])
 
 
-
-
+if(error===true){
+  return <NotFound/>
+}
 
 
   return (
@@ -18,11 +27,11 @@ const TeacherDetails = () => {
      alt="" 
      width="300px"
      />
-      <h4>{item.username}</h4>
-      <h5>{item.name}</h5>
-      <h5>{item.phone}</h5>
-      <h5>{item.website}</h5>
-      <h5>{item.email}</h5>
+      <h4>{kisi.username}</h4>
+      <h5>{kisi.name}</h5>
+      <h5>{kisi.phone}</h5>
+      <h5>{kisi.website}</h5>
+      <h5>{kisi.email}</h5>
      </div>
 
      <button className='btn btn-warning'>
